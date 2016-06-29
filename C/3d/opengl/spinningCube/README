@@ -1,0 +1,3 @@
+Compilation:
+  gcc spinningCube.c -o spinningCube -lGL -lGLU -lglut
+

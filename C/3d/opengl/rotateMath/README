@@ -1,0 +1,9 @@
+Compilation:
+  gcc rotateMath.c -o rotateMath -lGL -lGLU -lglut -lm
+
+Description:
+  This program demonstrates the use of trigonometric functions (sin,cos)     
+  to rotate object around point 0,0.                                
+  You can modify ANGLE macro to change degrees of rotation
+  (default is 1 degree).  
+  Use x/X/y/Y/z/Z keyboard keys to rotate plane.

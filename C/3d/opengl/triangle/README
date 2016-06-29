@@ -1,0 +1,5 @@
+Compilation:
+  gcc triangle.c -lGL -lGLU -lglut
+
+Keyboard keys:
+  Use x, X, y, Y, z, Z to transform view (gluLookAt function());

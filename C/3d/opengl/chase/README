@@ -1,0 +1,10 @@
+Compilation:
+  gcc chase.c -lGL -lGLU -lglut -lm
+
+Description:
+  This program demonstrates chasing of two objects.              
+  Use keyboard arrows (up/down/left/right) to navigate cube 1.  
+  Cube 2 chases cube 2 using vectors.                           
+  Use x/X/y/Y/z/Z keyboard keys to rotate objects.              
+  Increase/decrease speed of chasing using p2Speed variable.    
+
