@@ -1,7 +1,7 @@
 /*
 ##########################################################################
 # This program shows all permutations of given array (arr).		 #   
-# You can modify arr and nr variable. The number of permutations is nr!  #
+# You can modify arr and nr variables. The number of permutations is nr! #
 ##########################################################################
 */
 
