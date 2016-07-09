@@ -6,7 +6,7 @@
 void printCombination(int idx, int *tmpA) {
    int i;
    for (i = 0; i < idx; i++) 
-     printf("%d ", tmpA[i]);
+     printf("%d", tmpA[i]);
    printf("\n"); 
 }
 
