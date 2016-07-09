@@ -16,7 +16,7 @@ void printfStack(int *stack, int nr) {
   int i;
 
   for (i = 0; i < nr; i++)
-     printf("%d", stack[i]);
+    printf("%d", stack[i]);
   printf("\n");
 }
 
