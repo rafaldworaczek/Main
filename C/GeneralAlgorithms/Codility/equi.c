@@ -2,7 +2,7 @@
 Look at https://codility.com/demo/results/demoQD6SQT-KRJ/
 */
 
-/* Solution 100% - Complexity O(N) */
+/* Solution 100% - Time complexity O(N) */
 
 int solution(int A[], int N) {
   // write your code in C99 (gcc 4.8.2)
