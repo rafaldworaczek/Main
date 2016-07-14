@@ -4,34 +4,6 @@ Look at https://codility.com/demo/results/trainingDYRQDX-WCV/
 
 /* Solution 100% - Time complexity O(N) */
 
-int solution(int A[], int N) {
-    // write your code in C99 (gcc 4.8.2)
-    int peaks[N];
-    int k = 0;
-    int nr = 0;
-    int max = 0;
-    int left, right;
-    
-    nr = fillPeak(peaks, A, N);
-        
-    left = 1;
-    right = nr;
-     
-    //Binary search             
-    while (left <= right) {
-        k = (right + left) / 2;          
-     
-        if (check(k, peaks, nr) == 1) {          
-            max = k;            
-            left = k + 1;
-        }
-        else
-            right = k - 1;        
-    }
-    
-    return max;
-}
-
 int fillPeak(int *p, int *A, int N) {
         
     int i = 0, idx = 0;
