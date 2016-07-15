@@ -13,7 +13,7 @@ int solution(int A[], int N) {
 
     unsigned int *res = calloc(N + 2, sizeof(int));
 
-   for (i = 0; i < N; i++) {
+    for (i = 0; i < N; i++) {
         if (A[i] <= 0 || A[i] > N + 1) 
             continue;
         
