@@ -15,7 +15,7 @@ int *preallocateFib(int N) {
     res[1] = 2;
     
     for (i = 2; i < N; i++)
-        res[i] = res[i-1] + res[i-2];
+        res[i] = res[i - 1] + res[i - 2];
     
     return res;
 }
@@ -26,7 +26,7 @@ int solution(int A[], int N) {
     //25 is enough since N is from 0 to 100,000
     int fibnr = 25;    
     int *fib = preallocateFib(fibnr);
-    int *res = (int *) calloc(N +1, sizeof(int));
+    int *res = (int *) calloc(N + 1, sizeof(int));
        
     res[N] = -1;
     
