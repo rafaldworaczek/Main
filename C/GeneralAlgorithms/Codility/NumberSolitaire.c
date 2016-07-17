@@ -1,5 +1,5 @@
 /*
-Look at https://codility.com/demo/results/demoQD6SQT-KRJ/
+Look at https://codility.com/demo/results/trainingHQM9VC-W35/
 */
 
 /* Solution 100% - Time complexity O(N) */
