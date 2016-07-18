@@ -3,6 +3,7 @@ Look at https://codility.com/demo/results/trainingHJFJWQ-XFT/
 */
 
 /* Solution 100% - Time complexity O(N) */
+/* it might be done much easier - to correct */
 
 int checkOverlap(int x1, int x2, int y1, int y2) {
     
