@@ -1,6 +1,9 @@
+/* Task description: 
+http://main.edu.pl/en/archive/pa/2006/tar
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
-#include <limits.h>
 
 struct building {
   int nr;
