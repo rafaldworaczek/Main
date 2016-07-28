@@ -146,7 +146,8 @@ function read_file ()
 #PROGRAM STARTS HERE                                      #
 ###########################################################
  
-find $MAIN_DIR -maxdepth 1 -type f -printf "%f\n" | grep -P "\-[0-9]{10}$" | awk -F "-" '{print $1}' | sort | uniq | while read filename; do
+find $MAIN_DIR -maxdepth 1 -type f -printf "%f\n" | grep -P "\-[0-9]{10}$" | 
+awk -F "-" '{print $1}' | sort | uniq | while read filename; do
    read_file $filename &
  
     curr_child=`jobs -p | wc -l`
