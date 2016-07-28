@@ -1,0 +1,14 @@
+Description:
+  This is single threaded asynchronous proxy server.
+
+Compilation:
+  gcc socket.c main.c poll_method.c epoll_method.c messages.c -o proxy
+
+Program arguments:
+  argv[1] <poll | epoll>
+  argv[2] server bind address
+  argv[3] server port
+  argv[4] forward address
+  argv[5] forward port
+
+
