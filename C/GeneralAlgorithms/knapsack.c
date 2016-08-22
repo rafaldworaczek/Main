@@ -9,13 +9,13 @@
 #define MIN(x, y) (((x) < (y)) ? (x) : (y))
 #define MAX(x, y) (((x) > (y)) ? (x) : (y))
 
-unsigned long int knapsack(unsigned long int size,
-			    unsigned long int n,
-	     		    unsigned long int *val,
-	      		    unsigned long int *w) 
+int knapsack(int size,
+ 		    	   int n,
+  	     		   int *v,
+	      		   int *w) 
 {
-  unsigned long int kp[n+1][size+1];
-  unsigned long int i, j;
+  int kp[n+1][size+1];
+  int i, j;
 
   for (i = 0; i <= size; i++)
     kp[0][i] = 0;    
@@ -25,8 +25,10 @@ unsigned long int knapsack(unsigned long int size,
 
   for (i = 1; i <= n; i++) {
     for (j = 1; j <= size; j++) {
-      kp[i][j] = MAX((j - w[i-1] >= 0)? (kp[i-1][j-w[i - 1]] + val[i-1]):0, 
-		      kp[i-1][j]); 
+      if ((j - w[i-1]) >= 0) 
+        kp[i][j] = MAX(kp[i-1][j-w[i - 1]] + v[i-1], kp[i-1][j]); 
+      else
+        kp[i][j] = kp[i-1][j]; 
     }
   }
 
@@ -44,14 +46,14 @@ unsigned long int knapsack(unsigned long int size,
 */
  
 int main() {
-  unsigned long int n, size, i;
-  scanf("%lu %lu", &size, &n);
-  unsigned long int val[n];
-  unsigned long int weight[n];
+  int n, size, i;
+  scanf("%d %d", &size, &n);
+  int val[n];
+  int weight[n];
   for (i = 0; i < n; i++) 
-    scanf("%lu %lu", &val[i], &weight[i]);
+    scanf("%d %d", &val[i], &weight[i]);
 
-  printf("Max val: %lu\n", knapsack(size, n, val, weight));
+  printf("Max val: %d\n", knapsack(size, n, val, weight));
   return 0; 
 }
  
