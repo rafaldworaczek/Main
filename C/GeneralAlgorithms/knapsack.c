@@ -9,10 +9,7 @@
 #define MIN(x, y) (((x) < (y)) ? (x) : (y))
 #define MAX(x, y) (((x) > (y)) ? (x) : (y))
 
-int knapsack(int size,
- 		    	   int n,
-  	     		   int *v,
-	      		   int *w) 
+int knapsack(int size, int n, int *v, int *w) 
 {
   int kp[n+1][size+1];
   int i, j;
