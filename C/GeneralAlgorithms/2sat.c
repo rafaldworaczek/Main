@@ -95,9 +95,9 @@ int main() {
   size = n * 2; 
   struct adj *G = (struct adj *) malloc((size + 1) * sizeof(struct adj));
   struct adj *R = (struct adj *) malloc((size + 1) * sizeof(struct adj));
-  int SCC[size + 1];
-  int stack[size]; 
-  int marked[size + 1];
+  int *SCC = (int *) malloc((size + 1) * sizeof(int));
+  int *stack = (int *) malloc((size) * sizeof(int));
+  int *marked = (int *) malloc((size + 1) * sizeof(int));
   initList(G, size);
   initList(R, size);
   
@@ -122,7 +122,6 @@ int main() {
   }
 
   clear(marked, size);
-
   for (i = size - 1; i >= 0; i--) 
     if (!marked[stack[i]]) {
       dfs(R, stack[i], stack, 0, marked, 1, 
@@ -130,13 +129,20 @@ int main() {
       strongComponents++;
     }
 
+  free(G);
+  free(R);
+  free(stack);
+  free(marked); 
+
   for (i = 1; i <= n; i++) {
     if (SCC[i] == SCC[i + n]) {
       printf("not satisfiable.\n");  
+      free(SCC);
       return 0;
     }
   }
-
+ 
+  free(SCC); 
   printf("satisfiable\n");
 
   return 0; 
