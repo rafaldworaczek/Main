@@ -46,7 +46,8 @@ int main() {
   }
 
   printf("%d\n", res);
-
+  free(graph);
+  free(cnt);
   return 0; 
 }
  
