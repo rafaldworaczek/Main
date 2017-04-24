@@ -37,8 +37,8 @@ int main() {
     qsort(d, n - size, sizeof(d[0]), comparator);
 
     for (j = i - d[i].val; j < i; j++) {
-	d[j].val--; 
-	printf("%d %d\n", d[i].nr, d[j].nr);
+      d[j].val--; 
+      printf("%d %d\n", d[i].nr, d[j].nr);
     } 
 
     size++;
